@@ -1,0 +1,121 @@
+:root {
+    --primary: #112D4E;
+    --secondary: #3F72AF;
+    --light: #DBE2EF;
+    --white: #F9F7F7;
+    --shadow: rgba(17, 45, 78, 0.1);
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light);
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px var(--shadow);
+    width: 100%;
+    max-width: 500px;
+}
+
+h2 {
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.input-box {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+input {
+    height: 45px;
+    border: 2px solid var(--light);
+    border-radius: 8px;
+    padding: 0 15px;
+    font-size: 16px;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--secondary);
+}
+
+.button-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    background: var(--secondary);
+    color: var(--white);
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    background: var(--primary);
+}
+
+button.reset {
+    background: var(--light);
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+button.reset:hover {
+    background: #c4ccd9;
+}
+
+p {
+    width: 100%;
+    text-align: center;
+    color: var(--primary);
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.result {
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .input-box {
+        flex-direction: column;
+    }
+    
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
